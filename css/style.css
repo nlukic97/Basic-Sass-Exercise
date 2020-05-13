@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+nav ul {
+  padding: 0px;
+  width: 105px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+nav ul li {
+  list-style: none;
+  text-align: right;
+  display: inline-block;
+  font-family: "DM Mono", monospace;
+  width: 105px;
+}
+nav ul li a {
+  width: 100%;
+  height: 100%;
+  padding: 10px 5px;
+  display: inline-block;
+  color: #fff;
+  background-color: #A75813;
+  text-decoration: none;
+  /*
+  :hover{
+    background-color: tan; //Zasto ovo zasvetli samo ikonicu a ne ceo a tag, koji zauzima celu sirinu li?
+  }
+  */
+}
+nav ul li a i {
+  padding-left: 10px;
+  padding-right: 5px;
+}
+nav ul #one, nav ul #two, nav ul #three, nav ul #four, nav ul #five {
+  position: relative;
+  top: 0;
+  left: -80px;
+  transition: 0.4s all;
+}
+nav ul #one:hover, nav ul #two:hover, nav ul #three:hover, nav ul #four:hover, nav ul #five:hover {
+  left: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */

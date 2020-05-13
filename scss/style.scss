@@ -1,0 +1,67 @@
+$background-color: #A75813;
+$text-color: #fff;
+$font: 'DM Mono', monospace;
+$box-width: 105px;
+  
+
+@mixin borders($width){
+  border-top-right-radius: $width;
+  border-bottom-right-radius: $width;
+}
+
+
+body {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+nav {
+  position:absolute;
+  top:100px;
+  left:0;
+  ul{
+    padding:0px;
+    width: $box-width;
+    @include borders(15px);
+    
+    li{
+      list-style: none;
+      text-align: right;
+      display: inline-block;
+      font-family: $font;
+      width: $box-width;
+      // :hover{
+      //   background-color: orange;
+      // }
+      a{
+        width: 100%;
+        height: 100%;
+        padding:10px 5px;
+        display: inline-block;
+        color:$text-color;
+        background-color: $background-color;
+        text-decoration: none;
+        /*
+        :hover{
+          background-color: tan; //Zasto ovo zasvetli samo ikonicu a ne ceo a tag, koji zauzima celu sirinu li?
+        }
+        */
+        i{
+          padding-left: 10px;
+          padding-right: 5px;
+        }
+      }
+    }
+    #one, #two, #three, #four, #five {
+      position: relative;
+      top:0;
+      left:-80px;
+      // left:calc($box-width * (-0.76)) // kako bih mogao ovo da podesim - da li bi morao i js da se povezuje?
+      transition: 0.4s all;
+    }
+    #one:hover,#two:hover, #three:hover,#four:hover,#five:hover{
+      left:0px;
+    }
+  }
+}
