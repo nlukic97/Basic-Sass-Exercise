@@ -20,7 +20,9 @@ nav {
   position:absolute;
   top:100px;
   left:0;
+  //kako bi centrirao ovo na ekranu?
   ul{
+    margin:0;
     padding:0px;
     width: $box-width;
     @include borders(15px);
@@ -32,7 +34,7 @@ nav {
       font-family: $font;
       width: $box-width;
       // :hover{
-      //   background-color: orange;
+      //   background-color: orange; //ovako se menja pozadina cela kad se hoveruje na 'a', dole nije slucaj
       // }
       a{
         width: 100%;
@@ -44,7 +46,7 @@ nav {
         text-decoration: none;
         /*
         :hover{
-          background-color: tan; //Zasto ovo zasvetli samo ikonicu a ne ceo a tag, koji zauzima celu sirinu li?
+          background-color: tan; //Zasto ovo zasvetli samo ikonicu a ne ceo a tag?
         }
         */
         i{
@@ -55,7 +57,7 @@ nav {
     }
     #one, #two, #three, #four, #five {
       position: relative;
-      top:0;
+      top:0; //zasto ovo ne salje sve gore na 0 od vrha nav, nego efektivno ne radi nista ?
       left:-80px;
       // left:calc($box-width * (-0.76)) // kako bih mogao ovo da podesim - da li bi morao i js da se povezuje?
       transition: 0.4s all;
